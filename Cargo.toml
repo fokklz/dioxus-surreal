@@ -1,0 +1,19 @@
+[package]
+name = "dx-surreal"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+dioxus = { git = "https://github.com/DioxusLabs/dioxus.git", rev = "472031d1f51557601797d1cb469f09e4f3e0ca71", features = [
+    "desktop",
+    "router"
+]}
+directories-next = "2.0.0"
+futures-util = "0.3.30"
+surrealdb = "1.4.2"
+tokio = { version = "1.37.0", features = ["full"] }
+
+[features]
+default = []
+desktop = ["dioxus/desktop"]
+fullstack = ["dioxus/fullstack"]
